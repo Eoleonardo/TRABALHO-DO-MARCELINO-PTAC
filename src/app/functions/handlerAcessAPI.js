@@ -22,12 +22,15 @@ const users = [
 
 const getUserAuthenticated = (users, user) => {
 for (let i = 0; i < users.length; i++){
-    if (users[i].email === user.email && users[i].password === user.password)
-    return true;
-}
+    if (users[i].email === user.email && users[i].password === user.password) {
+        return true;
+    }
+ }
+ return false
 }
 
-const getUsers = () =>{
-        
+
+const getUsers = (user) =>{
+const getUserAuthenticated = users.find(u => u.email === user.email && u.password === user.password )
 }
 export { getUsers, getUserAuthenticated };
