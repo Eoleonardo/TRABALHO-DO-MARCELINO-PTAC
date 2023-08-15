@@ -31,6 +31,6 @@ for (let i = 0; i < users.length; i++){
 
 
 const getUsers = (user) =>{
-const getUserAuthenticated = users.find(u => u.email === user.email && u.password === user.password )
+const getUserAuthenticated = users.find(u => u.email === user.email && u.password === user.password);
 }
 export { getUsers, getUserAuthenticated };
