@@ -2,6 +2,9 @@
 import { useState } from "react";
 import handlerAcessUser from "./functions/handlerAcess"
 import { useRouter } from "next/navigation";
+import {ToastContainer, toast} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 export default function Login() {
   const [user, setUser] = useState({
@@ -13,10 +16,14 @@ export default function Login() {
   const handlerLogin = async (e) => {
     e.preventDefault();
     try {
-      await handlerAcessUser(user);
+      const userAuth = await handlerAcessUser(user);
+      if(userAuth.token === underfined){
+        toast.error("erro");
+      }
       push('/pages/dashboard');
+      
     } catch {
-      refresh();
+     toast.error("erro de novo poxa")
     }
   }
   return (
