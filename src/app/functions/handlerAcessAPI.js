@@ -20,18 +20,18 @@ const users = [
 }
 ]
 
-const getUserAuthenticated = (users, user) => {
+const getUserAuthenticated = (user) => {
+    let userAuth= {}
 for (let i = 0; i < users.length; i++){
     if (users[i].email === user.email && users[i].password === user.password) {
-        return true;
+        return userAuth = users[i] ;
     }
  }
- return false
+ return userAuth
 }
 
 
 const getUsers = (user) =>{
-const getUserAuthenticated = users.find(u => u.email === user.email && u.password === user.password);
-return getUserAuthenticated;
+return users;
 }
 export { getUsers, getUserAuthenticated };

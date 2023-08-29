@@ -17,7 +17,7 @@ export default function Login() {
     e.preventDefault();
     try {
       const userAuth = await handlerAcessUser(user);
-      if(userAuth.token === underfined){
+      if(userAuth.token === undefined){
         toast.error("erro");
       }
       push('/pages/dashboard');
