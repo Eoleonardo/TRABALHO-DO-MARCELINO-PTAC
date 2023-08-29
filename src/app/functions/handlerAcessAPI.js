@@ -22,7 +22,7 @@ const users = [
 
 const getUserAuthenticated = (user) => {
     let userAuth= {}
-for (let i = 0; i < users.length; i++){
+for ( let i = 0; i < users.length; i++ ){
     if (users[i].email === user.email && users[i].password === user.password) {
         return userAuth = users[i] ;
     }
@@ -31,7 +31,7 @@ for (let i = 0; i < users.length; i++){
 }
 
 
-const getUsers = (user) =>{
+const getUsers = () =>{
 return users;
 }
 export { getUsers, getUserAuthenticated };
