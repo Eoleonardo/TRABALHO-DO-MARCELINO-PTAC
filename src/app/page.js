@@ -17,6 +17,7 @@ export default function Login() {
     e.preventDefault();
     try {
       const userAuth = await handlerAcessUser(user);
+      console.log(userAuth);
       if(userAuth.token === undefined){
         toast.error("erro");
       }
