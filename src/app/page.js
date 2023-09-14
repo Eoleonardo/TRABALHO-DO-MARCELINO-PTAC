@@ -18,7 +18,7 @@ export default function Login() {
     try {
       const userAuth = await handlerAcessUser(user);
       if(userAuth.token === undefined){
-        toast.error("erro");
+        toast.error("erro novamente");
       }
       push('/pages/dashboard');
       
@@ -42,6 +42,7 @@ export default function Login() {
         </input>
         <button>Entrar</button>
       </form>
+      <ToastContainer/>
     </div>
   )
 }

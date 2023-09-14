@@ -24,7 +24,7 @@ for ( let i = 0; i < users.length; i++ ){
  return userAuth
 }
 
-const getUsers = (users) =>{
+const getUsers = () =>{
 return users;
 }
 export { getUsers, getUserAuthenticated };
