@@ -4,6 +4,7 @@ import handlerAcessUser from "./functions/handlerAcess"
 import { useRouter } from "next/navigation";
 import {ToastContainer, toast} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import './pages/css/login.css'
 
 
 export default function Login() {
@@ -26,8 +27,9 @@ export default function Login() {
      toast.error("erro de novo poxa")
     }
   }
+
   return (
-    <div>
+    <div className="caixa">
       <h1>Login</h1>
       <form onSubmit={handlerLogin}>
         <input
@@ -40,7 +42,7 @@ export default function Login() {
           type='password'
           onChange={(e) => { setUser({ ...user, password: e.target.value }) }}>
         </input>
-        <button>Entrar</button>
+        <button className="btn">Entrar</button>
       </form>
       <ToastContainer/>
     </div>

@@ -7,13 +7,9 @@ export default  function Dashboard() {
     return (
         <div>
               <Navbar/>
-            <h1>Dashboard</h1>    
-          
-            
             {users?.map((user, index) =>
             <div key={index}>
-                <h1>{user.name}</h1>
-                <h2>{user.password}</h2>
+                <h1>{user.name} {user.password}</h1>
             </div>
             )}
         </div>

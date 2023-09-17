@@ -2,6 +2,7 @@
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css'
 import Navbar from "@/app/componentes/navbar";
+import
 
 export default function Registro() {
   function registro(e) {
