@@ -2,7 +2,7 @@
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css'
 import Navbar from "@/app/componentes/navbar";
-import
+import '../css/registro.css'
 
 export default function Registro() {
   function registro(e) {
@@ -13,6 +13,7 @@ export default function Registro() {
     <div>
       <Navbar/>
       <form onSubmit={registro}>
+        <div  className="caixa">
         <p>NOME</p>
         <input type="name" required/>
         <p>EMAIL</p>
@@ -20,7 +21,8 @@ export default function Registro() {
         <p>SENHA</p>
         <input type="password" required/>
         <p></p>
-        <button>Cadastrar</button>
+        <button className="btn">Cadastrar</button>
+        </div>
       </form>
       <ToastContainer />
     </div>

@@ -13,6 +13,7 @@ export default function Alterar() {
     <div>
         <Navbar/>
       <form onSubmit={alterar}>
+        <div className="caixa">
         <p>NOME</p>
         <input type="name" required/>
         <p>EMAIL</p>
@@ -20,7 +21,8 @@ export default function Alterar() {
         <p>SENHA</p>
         <input type="password" required/>
         <p></p>
-        <button>Alterar</button>
+        <button className="btn">Alterar</button>
+        </div>
       </form>
       <ToastContainer />
     </div>
