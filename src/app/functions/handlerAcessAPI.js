@@ -14,17 +14,28 @@ const users = [
 }
 ]
 
+// Definindo uma função chamada 'getUserAuthenticated' que recebe um objeto 'user' como argumento
 const getUserAuthenticated = (user) => {
-    let userAuth= {}
-for ( let i = 0; i < users.length; i++ ){
-    if (users[i].email === user.email && users[i].password === user.password) {
-        return userAuth = users[i] ;
+    // Inicializa uma variável vazia 'userAuth'
+    let userAuth = {};
+  
+    // Loop for para percorrer o array 'users'
+    for (let i = 0; i < users.length; i++) {
+      // Verifica se o email e a senha do usuário correspondem a um dos objetos no array 'users'
+      if (users[i].email === user.email && users[i].password === user.password) {
+        // Se a correspondência for encontrada, atribui o objeto de usuário autenticado à variável 'userAuth'
+        return (userAuth = users[i]);
+      }
     }
- }
- return userAuth
-}
-
-const getUsers = () =>{
-return users;
-}
-export { getUsers, getUserAuthenticated };
+  
+    // Se nenhum usuário for encontrado, 'userAuth' permanecerá vazio e será retornado
+    return userAuth;
+  };
+  
+  // Definindo uma função chamada 'getUsers' que retorna o array 'users'
+  const getUsers = () => {
+    return users;
+  };
+  
+  // Exportando as funções 'getUsers' e 'getUserAuthenticated' para uso em outros módulos
+  export { getUsers, getUserAuthenticated };
