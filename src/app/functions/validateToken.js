@@ -2,7 +2,24 @@
 import { decode } from "jsonwebtoken";
 
 // Define uma função chamada 'validateToken' que recebe um parâmetro 'token'
-const validateToken = (token) => {
+const validateToken = async(token) => {
+const secret =
+try{
+    const isTokenValide = await jwtVerify( token, 
+        new TextEncoder().encode(secret))
+}
+
+
+
+
+
+
+
+
+
+
+
+
     // Decodifica o token usando a função 'decode' do módulo 'jsonwebtoken'
     const decodedToken = decode(token);
 
