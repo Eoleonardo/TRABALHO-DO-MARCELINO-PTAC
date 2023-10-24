@@ -3,24 +3,21 @@ import { decode } from "jsonwebtoken";
 
 // Define uma função chamada 'validateToken' que recebe um parâmetro 'token'
 const validateToken = async(token) => {
-const secret =
+const secret =""
 try{
     const isTokenValide = await jwtVerify( token, 
-        new TextEncoder().encode(secret))
+        new TextEncoder().encode(secret));
+        if(isTokenValide){
+           return true
+        }
+    }catch{
+        return false;
+    }
 }
 
+export { validateToken };
 
-
-
-
-
-
-
-
-
-
-
-    // Decodifica o token usando a função 'decode' do módulo 'jsonwebtoken'
+   /* // Decodifica o token usando a função 'decode' do módulo 'jsonwebtoken'
     const decodedToken = decode(token);
 
     // Verifica se 'decodedToken' possui um valor (ou seja, se o token é válido)
@@ -30,8 +27,4 @@ try{
     } else {
         // Se o token não for válido, retorna false
         return false;
-    }
-};
-
-// Exporta a função 'validateToken' para que ela possa ser usada em outros lugares
-export { validateToken };
+    }*/
