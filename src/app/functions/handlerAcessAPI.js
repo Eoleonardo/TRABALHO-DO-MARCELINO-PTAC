@@ -16,7 +16,7 @@ const getUserAuthenticated = async (user) => {
 }
 
   const getUsers = async (user) => {
-   const responseOfApi = await fetch(url = "/user", {cache:"no-cache"})
+   const responseOfApi = await fetch(url + "/users", {cache:"no-cache"})
    const userAuth = await responseOfApi.json();
    return userAuth;
   }
