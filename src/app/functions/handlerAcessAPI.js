@@ -7,11 +7,12 @@ const getUserAuthenticated = async (user) => {
     {
       method:"POST",
       cache:"no-cache",
-      headers: {"Contente-Type":"application/json"}, 
+      headers: {"Content-Type":"application/json"}, 
       body: JSON.stringify(user)
     }
     );
     const userAuth = await responseOfApi.json();
+    console.log(userAuth)
     return userAuth;
 }
 

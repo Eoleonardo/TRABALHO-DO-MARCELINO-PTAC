@@ -8,10 +8,10 @@ import Navbar from "@/app/componentes/navbar";
 import '../css/home.css'
 
 // Define e exporta a função Dashboard como um componente React
-export default function Dashboard() {
+export default async function Dashboard() {
     
     // Chama a função getUsers para obter a lista de usuários
-    const users = getUsers();
+    const users = await getUsers();
     
     // Renderiza o componente Dashboard
     return (
