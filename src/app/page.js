@@ -15,7 +15,6 @@ import './pages/css/login.css'
 export default function Login() {
 
   const [user, setUser] = useState({
-    name:'',
     email: '',
     password: ''
   });
@@ -43,6 +42,7 @@ export default function Login() {
     <div className="caixa">
       <h1>Login</h1>
       <form onSubmit={handlerLogin}>
+        
         <input
           placeholder='leo@gmail.com'
           type="email"

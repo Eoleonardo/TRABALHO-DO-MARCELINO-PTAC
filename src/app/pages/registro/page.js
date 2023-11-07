@@ -7,6 +7,19 @@ import 'react-toastify/dist/ReactToastify.css'; // Importa os estilos CSS para o
 import Navbar from "@/app/componentes/navbar"; // Importa o componente Navbar de um caminho específico no projeto.
 import '../css/registro.css'; // Importa o arquivo CSS de estilo para esta página.
 
+
+export default function Registro() {
+
+  const [user, setUser] = useState({
+    name:'',
+    email: '',
+    password: ''
+  });
+}
+
+  const { push, refresh } = useRouter();
+
+  
 export default function Registro() { // Define um componente de função chamado Registro.
   function registro(e) { // Define uma função chamada registro que recebe um evento 'e' como argumento.
     e.preventDefault(); // Impede o comportamento padrão do evento (no caso, o envio do formulário).
