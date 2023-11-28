@@ -18,7 +18,7 @@ const getUserAuthenticated = async (user) => {
 
 const postUser = async (user) => {
   try{
-   const responseApi = await fetch(url + "/user", {
+   const resposeOfApi = await fetch(url + "/user", {
   method:'POST',
   headers: { 
     'Content-Type': 'Application/json',
