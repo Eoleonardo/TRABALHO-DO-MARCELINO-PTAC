@@ -4,10 +4,23 @@ import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Navbar from "@/app/componentes/navbar";
 import '../css/alterar.css';
+import { getUsers, updateUser } from "@/app/functions/handlerAcessAPI";
+import { useState } from "react";
+import {useRouter} from 'next/navigation';
 
-export default function Alterar() {
-  function alterar(e) {
+export default function Alterar({params}) {
+
+  const [user, setUser] = useState({
+name:'',
+email:'',
+password:'',
+  });
+
+  const { push } = useRouter();
+
+ const handlerFormsubmit= async (e) =>{
     e.preventDefault();
+    await updateUser(user, params.id);
     toast.success("boa pai");
   }
 
