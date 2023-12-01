@@ -3,11 +3,12 @@
 const url ="https://leonascimento.vercel.app"
 
 const getUserAuthenticated = async (user) => {
+  console.log(user)
     const responseOfApi = await fetch(url + "/user/authenticated", 
     {
       method:"POST",
       cache:"no-cache",
-      headers: {"Content-Type":"application/json"}, 
+      headers: {"Content-Type":"Application/json"}, 
       body: JSON.stringify(user)
     }
     );
@@ -50,7 +51,7 @@ const postUser = async (user) => {
     }
     }
 
-  const getUsers = async (user) => {
+  const getUsers = async () => {
    const responseOfApi = await fetch(url + "/users", {cache:"no-cache"})
    const userAuth = await responseOfApi.json();
    return userAuth;

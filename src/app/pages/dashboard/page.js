@@ -1,3 +1,7 @@
+import Navbar from '@/app/componentes/navbar';
+import { getUsers } from '@/app/functions/handlerAcessAPI';
+
+
 export default async function Dashboard() {
     try {
         const users = await getUsers();
@@ -14,7 +18,7 @@ export default async function Dashboard() {
         );
     } catch (error) {
         console.error("Erro ao obter usuários:", error);
-        // Pode adicionar uma mensagem de erro na interface do usuário se necessário
+    
         return (
             <div>
                 <Navbar />
