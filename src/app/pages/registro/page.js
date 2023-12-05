@@ -23,10 +23,10 @@ export default function Registro() {
     try{
       await postUser(user);
       await new Promesi((resolve) => {
-        toast.success("boaa");
+        toast.success("boaa registro");
         setTimeout(resolve, 5000);
       });
-      return push("pages/dashboard") 
+      return push("/pages/dashboard") 
     }
     catch{
        return toast.error("erro")

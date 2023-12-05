@@ -13,16 +13,25 @@ export default function Alterar({params}) {
   const [user, setUser] = useState({
 name:'',
 email:'',
-password:'',
+password:''
   });
 
   const { push } = useRouter();
 
- const handlerFormsubmit= async (e) =>{
+ const alterar= async (e) =>{
     e.preventDefault();
+    try{
     await updateUser(user, params.id);
-    toast.success("boa pai");
+    await new Promesi((resolve) => {
+      toast.success("boaa altero");
+      setTimeout(resolve, 5000);
+    });
+    return push("/pages/dashboard") 
   }
+  catch{
+     return toast.error("erro")
+  }
+};
 
   return (
     <div>
