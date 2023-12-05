@@ -21,10 +21,7 @@ const postUser = async (user) => {
   try{
    const resposeOfApi = await fetch(url + "/user", {
   method:'POST',
-  headers: { 
-    'Content-Type': 'Application/json',
-  Cookie:`token=${token}`
-  },
+  headers: { 'Content-Type': 'Application/json',},
   body: JSON.stringify(user)
   });
   const userSave = await resposeOfApi.json();
