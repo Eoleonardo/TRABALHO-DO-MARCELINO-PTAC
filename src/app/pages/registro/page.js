@@ -14,12 +14,23 @@ export default function Registro() {
     password: '',
   });
 
-  //const { push, refresh } = useRouter();
+  const { push, refresh } = useRouter();
 
-  function registro(e) {
-    e.preventDefault();
-    toast.success('ebaaaaaaa');
-  }
+  const registro = async (event) => {
+    event.preventDefault();
+    try{
+      await postUser(user);
+      await new Promesi((resolve) => {
+        toast.success("boaa");
+        setTimeout(resolve, 5000);
+      });
+      return push("pages/dashboard") 
+    }
+    catch{
+       return toast.error("erro")
+    }
+  };
+  
 
   return (
     <div>
