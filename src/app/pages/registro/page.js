@@ -13,7 +13,7 @@ export default function Registro() {
   const [user, setUser] = useState({
     name: '',
     email: '',
-    password: '',
+    password: ''
   });
 
   const { push } = useRouter();
