@@ -12,7 +12,7 @@ export default function Alterar({params}) {
   const [user, setUser] = useState({
 name:'',
 email:'',
-password:'',
+password:''
   });
 
   const { push } = useRouter();
