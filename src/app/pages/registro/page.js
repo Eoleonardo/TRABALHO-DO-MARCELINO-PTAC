@@ -10,6 +10,7 @@ import { postUser } from '@/app/functions/handlerAcessAPI';
 
 
 export default function Registro() {
+
   const [user, setUser] = useState({
     name: '',
     email: '',
@@ -18,11 +19,11 @@ export default function Registro() {
 
   const { push } = useRouter();
 
-  const registro = async (event) => {
-    event.preventDefault();
+  const registro = async (e) => {
+    e.preventDefault();
     try{
       await postUser(user);
-      await new Promesi((resolve) => {
+      await new Promise((resolve) => {
         toast.success("boaa registro");
         setTimeout(resolve, 5000);
       });
