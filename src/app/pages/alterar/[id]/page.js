@@ -31,7 +31,7 @@ password:''
   catch{
      return toast.error("erro")
   }
-};
+}
 
   return (
     <div>
@@ -51,5 +51,5 @@ password:''
       <ToastContainer />
     </div>
   );
-}
+};
 
