@@ -18,11 +18,11 @@ password:''
 
   const { push } = useRouter();
 
- const alterar= async (e) =>{
+ const alterar= async (e) => {
     e.preventDefault();
     try{
     await updateUser(user, params.id);
-    await new Promesi((resolve) => {
+    await new Promise((resolve) => {
       toast.success("boaa altero");
       setTimeout(resolve, 5000);
     });
