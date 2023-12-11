@@ -1,12 +1,13 @@
 'use client'
 
+import React, {useState} from "react";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Navbar from "@/app/componentes/navbar";
-import '../css/alterar.css';
-import { getUsers, updateUser } from "@/app/functions/handlerAcessAPI";
-import { useState } from "react";
+import '../alterar.css';
+import { updateUser } from "@/app/functions/handlerAcessAPI";
 import {useRouter} from 'next/navigation';
+
 
 export default function Alterar({params}) {
 
