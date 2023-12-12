@@ -1,5 +1,7 @@
+'use serve'
 import Navbar from '@/app/componentes/navbar';
 import { getUsers } from '@/app/functions/handlerAcessAPI';
+import Link from 'next/link';
 
 
 export default async function Dashboard() {
@@ -11,7 +13,10 @@ export default async function Dashboard() {
                 <Navbar />
                 {users?.map((user, index) =>
                     <div key={index}>
-                        <h1>{user.name} {user.password}</h1>
+                       
+                    <Link href={`/pages/alterar/${user.id}`}>
+                    <h1>{user.name} {user.email} {user.password}</h1>
+                    </Link>
                     </div>
                 )}
             </div>
