@@ -31,22 +31,22 @@ const postUser = async (user) => {
   }
   }
 
-  const updateUser = async (user, id) => {
+  const updateUser = async (user, id) =>{
     try{
-     const resposeOfApi = await fetch(url + "/user" + id, {
-    method:'POST',
-    headers: { 
-      'Content-Type': 'Application/json',
-    Cookie:`token=${token}`
-    },
-    body: JSON.stringify(user)
-    });
-    const userUpdate = await resposeOfApi.json();
-    return userUpdate;
-    }catch {
-    return null;
+        const responseOfApi = await fetch(url + "/user/" + id, {
+            method: 'PUT',
+            headers: {"Content-Type": "Application/json"},
+            body: JSON.stringify(user)
+        });
+        console.log("Indo")
+        const userUpdate = await responseOfApi.json();
+        console.log(userUpdate)
+        return userUpdate;
     }
+    catch{
+        return null;
     }
+}
 
   const getUsers = async () => {
    const responseOfApi = await fetch(url + "/users", {cache:"no-cache"})
